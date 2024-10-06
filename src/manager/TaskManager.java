@@ -1,3 +1,10 @@
+package manager;
+
+import tasks.Epic;
+import tasks.Status;
+import tasks.Subtask;
+import tasks.Task;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +36,25 @@ public class TaskManager {
 
     public void deleteAllTasks() {
         tasks.clear();
+    }
+
+    public void deleteAllEpics() {
+        for (Epic epic : epics.values()) {
+            for (Subtask subtask : epic.getSubtasks()) {
+                subtasks.remove(subtask.getId());
+            }
+        }
         epics.clear();
+    }
+
+    public void deleteAllSubtasks() {
+        for (Subtask subtask : subtasks.values()) {
+            Epic epic = epics.get(subtask.getEpicId());
+            if (epic != null) {
+                epic.getSubtasks().remove(subtask);
+                updateEpicStatus(epic);
+            }
+        }
         subtasks.clear();
     }
 
@@ -104,6 +129,11 @@ public class TaskManager {
     }
 
     private void updateEpicStatus(Epic epic) {
+        if (epic.getSubtasks().isEmpty()) {
+            epic.setStatus(Status.NEW);
+            return;
+        }
+
         boolean allNew = true;
         boolean allDone = true;
 
