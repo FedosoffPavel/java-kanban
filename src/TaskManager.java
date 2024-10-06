@@ -47,17 +47,17 @@ public class TaskManager {
     }
 
     public void createTask(Task task) {
-        task.id = generateId();
+        task.setId(generateId());
         tasks.put(task.getId(), task);
     }
 
     public void createEpic(Epic epic) {
-        epic.id = generateId();
+        epic.setId(generateId());
         epics.put(epic.getId(), epic);
     }
 
     public void createSubtask(Subtask subtask) {
-        subtask.id = generateId();
+        subtask.setId(generateId());
         subtasks.put(subtask.getId(), subtask);
 
         Epic epic = epics.get(subtask.getEpicId());
