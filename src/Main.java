@@ -1,3 +1,4 @@
+import manager.InMemoryTaskManager;
 import manager.TaskManager;
 import tasks.Epic;
 import tasks.Status;
@@ -6,7 +7,7 @@ import tasks.Task;
 
 public class Main {
     public static void main(String[] args) {
-        TaskManager taskManager = new TaskManager();
+        TaskManager taskManager = new InMemoryTaskManager(); // Изменено на InMemoryTaskManager
 
         createTasks(taskManager);
         createEpicsAndSubtasks(taskManager);
@@ -14,6 +15,13 @@ public class Main {
         displayAllTasksAndEpics(taskManager);
 
         updateTaskStatuses(taskManager);
+
+        for (int i = 0; i < 9; i++) {
+            taskManager.getSubtaskById(5);
+        }
+
+        System.out.println("\nИстория просмотров:");
+        taskManager.getHistory().forEach(System.out::println);
 
         System.out.println("\nИзменение статусов");
         displayAllTasksAndEpics(taskManager);
