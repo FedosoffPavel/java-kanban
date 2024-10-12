@@ -1,4 +1,4 @@
-package tasks;
+package main.manager.tasks;
 
 import java.util.Objects;
 
@@ -63,7 +63,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "tasks.Task{" +
+        return "main.manager.tasks.Task{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +

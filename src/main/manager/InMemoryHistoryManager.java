@@ -1,6 +1,6 @@
-package manager;
+package main.manager;
 
-import tasks.Task;
+import main.manager.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package tasks;
+package main.manager.tasks;
 
 public class Subtask extends Task {
     private final int epicId;
@@ -14,7 +14,7 @@ public class Subtask extends Task {
 
     @Override
     public String toString() {
-        return "tasks.Subtask{" +
+        return "main.manager.tasks.Subtask{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
