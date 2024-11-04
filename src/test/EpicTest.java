@@ -1,7 +1,7 @@
-package test.manager;
+package test;
 
-import main.manager.tasks.Epic;
-import main.manager.tasks.Subtask;
+import main.tasks.Epic;
+import main.tasks.Subtask;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

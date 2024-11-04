@@ -1,4 +1,4 @@
-package main.manager.tasks;
+package main.tasks;
 
 public class Subtask extends Task {
     private final int epicId;

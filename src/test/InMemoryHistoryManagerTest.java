@@ -1,7 +1,7 @@
-package test.manager;
+package test;
 
-import main.manager.InMemoryHistoryManager;
-import main.manager.tasks.Task;
+import main.InMemoryHistoryManager;
+import main.tasks.Task;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

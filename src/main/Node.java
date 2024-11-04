@@ -1,4 +1,4 @@
-package main.manager;
+package main;
 
 public class Node<T> {
     public T data;
