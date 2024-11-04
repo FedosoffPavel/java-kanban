@@ -4,15 +4,20 @@ import main.manager.tasks.Epic;
 import main.manager.tasks.Subtask;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class EpicTest {
+
     @Test
     public void testEpicCannotAddItselfAsSubtask() {
         Epic epic = new Epic("Эпик 1", "Описание 1", 1);
-        Subtask subtask = new Subtask("Подзадача для этипа 1", "Описание", 2, epic.getId());
+        Subtask subtask = new Subtask("Подзадача для эпика 1", "Описание", 2, epic.getId());
 
-        assertNotEquals(epic.getId(), subtask.getEpicId(), "Эпик не может быть добавлена в качестве отдельной подзадачи");
+        Subtask invalidSubtask = new Subtask("Некорректная подзадача", "Описание", epic.getId(), epic.getId());
+        epic.addSubtask(invalidSubtask);
+
+        assertFalse(epic.getSubtasks().contains(invalidSubtask), "Эпик не должен добавляться как подзадача самому себе.");
     }
 
     @Test
