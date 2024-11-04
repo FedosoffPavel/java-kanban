@@ -1,10 +1,8 @@
-package test;
-
-import main.Managers;
-import main.TaskManager;
-import main.tasks.Epic;
-import main.tasks.Subtask;
-import main.tasks.Task;
+import manager.Managers;
+import manager.TaskManager;
+import tasks.Epic;
+import tasks.Subtask;
+import tasks.Task;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
