@@ -90,12 +90,14 @@ public class InMemoryTaskManager implements TaskManager {
     public void createTask(Task task) {
         task.setId(generateId());
         tasks.put(task.getId(), task);
+        historyManager.add(task);
     }
 
     @Override
     public void createEpic(Epic epic) {
         epic.setId(generateId());
         epics.put(epic.getId(), epic);
+        historyManager.add(epic);
     }
 
     @Override
@@ -108,6 +110,7 @@ public class InMemoryTaskManager implements TaskManager {
             epic.addSubtask(subtask);
             updateEpicStatus(epic);
         }
+        historyManager.add(subtask);
     }
 
     @Override

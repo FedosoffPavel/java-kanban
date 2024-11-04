@@ -9,10 +9,14 @@ import main.manager.tasks.Task;
 public class Main {
     public static void main(String[] args) {
         TaskManager taskManager = Managers.getDefault();
-        HistoryManager historyManager = Managers.getDefaultHistory();
 
         createTasks(taskManager);
+
+        printStory(taskManager);
+
         createEpicsAndSubtasks(taskManager);
+
+        printStory(taskManager);
 
         displayAllTasksAndEpics(taskManager);
 
@@ -22,8 +26,6 @@ public class Main {
             taskManager.getSubtaskById(5);
         }
 
-        System.out.println("\nИстория просмотров:");
-        historyManager.getHistory().forEach(System.out::println);
 
         System.out.println("\nИзменение статусов");
         displayAllTasksAndEpics(taskManager);
@@ -32,6 +34,8 @@ public class Main {
 
         System.out.println("\nУдаление");
         displayAllTasksAndEpics(taskManager);
+
+        printStory(taskManager);
     }
 
     private static void createTasks(TaskManager taskManager) {
@@ -92,5 +96,10 @@ public class Main {
 
         taskManager.deleteTaskById(task1.getId());
         taskManager.deleteEpicById(epic1.getId());
+    }
+
+    private static void printStory(TaskManager taskManager) {
+        System.out.println("\nИстория просмотров:");
+        taskManager.getHistory().forEach(System.out::println);
     }
 }
