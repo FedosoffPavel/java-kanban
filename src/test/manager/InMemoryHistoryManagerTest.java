@@ -10,7 +10,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class InMemoryHistoryManagerTest {private InMemoryHistoryManager historyManager;
+public class InMemoryHistoryManagerTest {
+    private InMemoryHistoryManager historyManager;
 
     @BeforeEach
     void setUp() {
