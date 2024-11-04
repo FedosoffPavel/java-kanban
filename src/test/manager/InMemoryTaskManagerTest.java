@@ -55,9 +55,12 @@ public class InMemoryTaskManagerTest {
         taskManager.createTask(task);
 
         task.setTitle("Обновленная задача");
+        task.setDescription("Обновленное описание");
         taskManager.updateTask(task);
 
-        assertEquals("Обновленная задача", taskManager.getTaskById(1).getTitle(), "Название задачи должно быть обновлено.");
+        Task updatedTask = taskManager.getTaskById(1);
+        assertEquals("Обновленная задача", updatedTask.getTitle(), "Название задачи должно быть обновлено.");
+        assertEquals("Обновленное описание", updatedTask.getDescription(), "Описание задачи должно быть обновлено.");
     }
 
     @Test
