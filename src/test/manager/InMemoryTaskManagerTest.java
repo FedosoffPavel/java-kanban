@@ -225,7 +225,6 @@ public class InMemoryTaskManagerTest {
     @Test
     public void testGetNullTask() {
         TaskManager taskManager = Managers.getDefault();
-
         assertEquals(null, taskManager.getTaskById(567), "Задача с несуществующим идентификатором должна возвращать null.");
     }
 }

@@ -13,6 +13,7 @@ public class EpicTest {
     public void testEpicCannotAddItselfAsSubtask() {
         Epic epic = new Epic("Эпик 1", "Описание 1", 1);
         Subtask subtask = new Subtask("Подзадача для эпика 1", "Описание", 2, epic.getId());
+        epic.addSubtask(subtask);
 
         Subtask invalidSubtask = new Subtask("Некорректная подзадача", "Описание", epic.getId(), epic.getId());
         epic.addSubtask(invalidSubtask);
