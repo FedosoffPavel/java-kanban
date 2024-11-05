@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import tasks.Task;
+import main.tasks.Task;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

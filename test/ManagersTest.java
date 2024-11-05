@@ -1,3 +1,6 @@
+import main.InMemoryHistoryManager;
+import main.Managers;
+import main.TaskManager;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;

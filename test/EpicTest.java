@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
-import tasks.Epic;
-import tasks.Subtask;
+import main.tasks.Epic;
+import main.tasks.Subtask;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

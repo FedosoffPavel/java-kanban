@@ -1,7 +1,9 @@
-import tasks.Epic;
-import tasks.Status;
-import tasks.Subtask;
-import tasks.Task;
+package main;
+
+import main.tasks.Epic;
+import main.tasks.Status;
+import main.tasks.Subtask;
+import main.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,7 +1,7 @@
-src/test/java/com/example/TaskTest.java
-src/test/java/com/example/SubtaskTest.java
-src/test/java/com/example/ManagersTest.java
-src/test/java/com/example/InMemoryTaskManagerTest.java
-src/test/java/com/example/InMemoryHistoryManagerTest.java
-src/test/java/com/example/EpicTest.java
-src/test/java/com/example/TaskTest.java
+test/java/com/example/TaskTest.java
+test/java/com/example/SubtaskTest.java
+test/java/com/example/ManagersTest.java
+test/java/com/example/InMemoryTaskManagerTest.java
+test/java/com/example/InMemoryHistoryManagerTest.java
+test/java/com/example/EpicTest.java
+test/java/com/example/TaskTest.java

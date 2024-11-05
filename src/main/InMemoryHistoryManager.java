@@ -1,4 +1,6 @@
-import tasks.Task;
+package main;
+
+import main.tasks.Task;
 
 import java.util.ArrayList;
 import java.util.HashMap;

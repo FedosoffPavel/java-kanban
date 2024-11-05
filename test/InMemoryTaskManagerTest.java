@@ -1,8 +1,10 @@
+import main.Managers;
+import main.TaskManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tasks.Epic;
-import tasks.Subtask;
-import tasks.Task;
+import main.tasks.Epic;
+import main.tasks.Subtask;
+import main.tasks.Task;
 
 import java.util.List;
 
