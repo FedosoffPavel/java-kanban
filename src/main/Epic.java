@@ -1,7 +1,3 @@
-package tasks;
-
-import tasks.Subtask;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +22,7 @@ public class Epic extends Task {
 
     @Override
     public String toString() {
-        return "main.manager.tasks.Epic{" +
+        return "main.manager.Epic{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
