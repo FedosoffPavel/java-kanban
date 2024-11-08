@@ -1,8 +1,6 @@
-package test.manager;
-
-import main.manager.Managers;
-import main.manager.TaskManager;
-import main.manager.InMemoryHistoryManager;
+import main.InMemoryHistoryManager;
+import main.Managers;
+import main.TaskManager;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;

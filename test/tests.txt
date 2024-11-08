@@ -1,0 +1,7 @@
+test/java/com/example/TaskTest.java
+test/java/com/example/SubtaskTest.java
+test/java/com/example/ManagersTest.java
+test/java/com/example/InMemoryTaskManagerTest.java
+test/java/com/example/InMemoryHistoryManagerTest.java
+test/java/com/example/EpicTest.java
+test/java/com/example/TaskTest.java

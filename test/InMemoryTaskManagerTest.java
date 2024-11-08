@@ -1,12 +1,10 @@
-package test.manager;
-
-import main.manager.Managers;
-import main.manager.TaskManager;
-import main.manager.tasks.Epic;
-import main.manager.tasks.Subtask;
-import main.manager.tasks.Task;
+import main.Managers;
+import main.TaskManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import main.tasks.Epic;
+import main.tasks.Subtask;
+import main.tasks.Task;
 
 import java.util.List;
 
@@ -55,9 +53,12 @@ public class InMemoryTaskManagerTest {
         taskManager.createTask(task);
 
         task.setTitle("Обновленная задача");
+        task.setDescription("Обновленное описание");
         taskManager.updateTask(task);
 
-        assertEquals("Обновленная задача", taskManager.getTaskById(1).getTitle(), "Название задачи должно быть обновлено.");
+        Task updatedTask = taskManager.getTaskById(1);
+        assertEquals("Обновленная задача", updatedTask.getTitle(), "Название задачи должно быть обновлено.");
+        assertEquals("Обновленное описание", updatedTask.getDescription(), "Описание задачи должно быть обновлено.");
     }
 
     @Test
@@ -222,7 +223,6 @@ public class InMemoryTaskManagerTest {
     @Test
     public void testGetNullTask() {
         TaskManager taskManager = Managers.getDefault();
-
         assertEquals(null, taskManager.getTaskById(567), "Задача с несуществующим идентификатором должна возвращать null.");
     }
 }

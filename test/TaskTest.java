@@ -1,7 +1,5 @@
-package test.manager;
-
-import main.manager.tasks.Task;
 import org.junit.jupiter.api.Test;
+import main.tasks.Task;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

@@ -1,4 +1,4 @@
-package main.manager.tasks;
+package main.tasks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,9 @@ public class Epic extends Task {
     }
 
     public void addSubtask(Subtask subtask) {
+        if (subtask.id == this.getId()) {
+            return;
+        }
         subtasks.add(subtask);
     }
 
